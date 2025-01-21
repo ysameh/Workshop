@@ -46,13 +46,13 @@ The script performs the following tasks:
 
 2. **Make the script executable**:
    ```bash
-   chmod +x pet_clinic_setup.sh
+   chmod +x pet-clinic_setup.sh
    ```
 
 3. **Execute the script**:
    Run the script 
    ```bash
-   ./pet_clinic_setup.sh
+   ./pet-clinic_setup.sh
    ```
 
 4. **Set a password**:  
