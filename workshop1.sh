@@ -13,30 +13,16 @@ create_pet-clinic_user(){
 	if [ $? -ne 0 ]; then
 	    echo "Error: Failed to create user 'pet-clinic'."
 	    exit 1
-	else
-	    echo "User created successfully."
 	fi
 
 	# Prompt for password
 	while true; do
-	    read -sp "Enter password for 'pet-clinic' user: " PASSWORD
-	    echo
-	    read -sp "Confirm password: " PASSWORD_CONFIRM
-	    echo
-	    if [ "${PASSWORD}" == "${PASSWORD_CONFIRM}" ]; then
-		# Set password if both matches
-		echo "pet-clinic:${PASSWORD}" | sudo chpasswd
-		if [ $? -eq 0 ]; then
-		    echo "Password set successfully."
-		    echo "User 'pet-clinic' created successfully"
-		    break
-		else
-		    echo "Failed to set password."
-		    exit 1
-		fi
-	    else
-		echo "Passwords do not match. Please try again."
-		
+	    # Set password
+	    sudo passwd pet-clinic
+	    # Check if no errors
+	    if [ $? -eq 0 ]; then
+	          echo "User 'pet-clinic' created successfully"
+        	  break	
 	    fi
 	done
     fi
@@ -44,12 +30,10 @@ create_pet-clinic_user(){
 
 
 
-
+# Function to install Java JDK in the new user home directory
 
 install_jdk(){
-
     
-
     # Define default variables
     local USER_HOME=$1 # Pass user home directory to the function
     JDK_Version="17"   # Add desired JDK version
