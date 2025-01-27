@@ -50,12 +50,11 @@ The script performs the following tasks:
 
 ## Steps to prepare the Encrypted file
 
-1. **Create a plain text file named `credentials.txt` with multiple key-value pairs
+1. **Create a plain text file named `credentials.txt` with multiple key-value pairs**
 
 ```
 user1=password1
 user2=password2
-
 ```
 
 2. **Encrypt the file**
