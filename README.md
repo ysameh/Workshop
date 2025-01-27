@@ -78,7 +78,7 @@ rm credentials.txt
    You can either download the script or clone it from your repository.
 
 2. **Add the encrypted file to the directory**:
-   Make sure to add the decryption key in the script
+   Make sure to add the decryption key in the script.
 
 3. **Make the script executable**:
    ```bash
