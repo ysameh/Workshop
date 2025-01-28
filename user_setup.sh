@@ -43,7 +43,7 @@ create_user() {
             exit 1
         fi
 	# Log 
-        logger "User '${username}' created by $(whoami) using root prev"
+        logger "User '${username}' created by $(whoami) using root privileges"
     fi
 }
 
